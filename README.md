@@ -1,7 +1,9 @@
 # Advanced-Git-Learning
 
+```bash
 Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git
 $ echo "# Advanced-Git-Learning" >> README.md
+
 
 Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git
 $ git init
@@ -76,3 +78,5 @@ $ git add test3.md && git commit -m "chore: Creating third and forth file "
 [main cadd810] chore: Creating third and forth file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test3.md
+
+```bash
