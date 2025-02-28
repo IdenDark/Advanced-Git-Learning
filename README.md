@@ -1,5 +1,7 @@
 # Advanced-Git-Learning
 
+# Exercise 1
+
 ```bash
 Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git
 $ echo "# Advanced-Git-Learning" >> README.md
@@ -25,7 +27,7 @@ Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (master)
 $ git branch  -m  main
 
 Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
-$ git remote add origin git@github.com:IdenDark/Advanced-Git-Learning.git       
+$ git remote add origin git@github.com:IdenDark/Advanced-Git-Learning.git
 Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
 $ git push -u origin main
 Enumerating objects: 3, done.
@@ -73,10 +75,121 @@ $ git add test2.md && git commit -m "chore: Creating another file "
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test2.md
 
+
 Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
 $ git add test3.md && git commit -m "chore: Creating third and forth file "
 [main cadd810] chore: Creating third and forth file
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 test3.md
+```
+
+## Exercise 2
 
 ```bash
+$ git log
+commit 34d8419a047970bb876c9b1c72c0ebd5cffaf5c5 (HEAD -> main, origin/main)
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:14:36 2025 +0200
+
+     First commision
+```
+
+```bash
+commit e3f5bd29b13f879a045a4db745e983894f592081
+commit 34d8419a047970bb876c9b1c72c0ebd5cffaf5c5 (HEAD -> main, origin/main)
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:14:36 2025 +0200
+
+     First commision
+
+commit e3f5bd29b13f879a045a4db745e983894f592081
+commit 34d8419a047970bb876c9b1c72c0ebd5cffaf5c5 (HEAD -> main, origin/main)
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:14:36 2025 +0200
+
+     First commision
+
+commit e3f5bd29b13f879a045a4db745e983894f592081
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:09:16 2025 +0200
+
+     First commision
+
+commit cadd8100aa306e7ce33451d1fe7ba6542caef1fc
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:04:52 2025 +0200
+
+    chore: Creating third and forth file
+
+commit 13994b756bacf77ef0add6c43b5d149fdbc762ca
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:04:08 2025 +0200
+
+    chore: Creating another file
+
+commit b9e91fb54f206b967d6279c164b87a5d6845ca74
+Author: IdenDark <bonheurndacyayisenga@gmail.com>
+Date:   Fri Feb 28 12:03:53 2025 +0200
+```
+
+```bash
+
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ git log --online --graph --all
+fatal: unrecognized argument: --online
+
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ git log --oneline --graph --all
+
+- 34d8419 (HEAD -> main, origin/main) First commision
+- e3f5bd2 First commision
+- cadd810 chore: Creating third and forth file
+- 13994b7 chore: Creating another file
+- b9e91fb chore: Creating initial file
+- ab7789b First commission
+```
+
+```bash
+
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+(use "git add <file>..." to update what will be committed)
+(use "git restore <file>..." to discard changes in working directory)
+ modified: README.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ ls
+README.md test1.md test2.md test3.md test4.md
+
+```
+
+```bash
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ git add test4.md
+```
+
+```bash
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ git commit --amend -m "chore: Create the forth file"
+[main a9e799a] chore: Create the forth file
+Date: Fri Feb 28 12:14:36 2025 +0200
+1 file changed, 4 insertions(+)
+```
+
+```bash
+Shepherd@Syndicate MINGW64 ~/Documents/GYM/Advanced Git (main)
+$ git log --oneline
+a9e799a (HEAD -> main) chore: Create the forth file
+e3f5bd2 First commision
+cadd810 chore: Creating third and forth file
+13994b7 chore: Creating another file
+b9e91fb chore: Creating initial file
+ab7789b First commission
+
+```
