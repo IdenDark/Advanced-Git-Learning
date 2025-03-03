@@ -193,3 +193,40 @@ b9e91fb chore: Creating initial file
 ab7789b First commission
 
 ```
+
+### Exercise 3
+
+```bash
+$ git reflog
+
+251b3d7 (HEAD -> main, origin/main) HEAD@{0}: rebase (finish): returning to refs
+/heads/main
+251b3d7 (HEAD -> main, origin/main) HEAD@{1}: rebase (pick): Exercise 2 Amending
+efa8cc3 HEAD@{2}: rebase (pick): chore: Create the forth file
+0cd49e4 HEAD@{3}: rebase (pick): First commision
+43d9373 HEAD@{4}: rebase (pick): chore: Creating third and forth file
+4d31f5f HEAD@{5}: rebase (reword): chore: Creating a second file
+13994b7 HEAD@{6}: rebase: fast-forward
+b9e91fb HEAD@{7}: rebase (start): checkout HEAD~6
+1cfb6db HEAD@{8}: rebase (finish): returning to refs/heads/main
+
+```
+
+```bash
+$ git rebase -i HEAD~6
+
+pick b9e91fb chore: Creating initial file
+reword 13994b7 chore: Creating another file
+pick cadd810 chore: Creating third and forth file
+pick e3f5bd2 First commission
+pick 34d8419 First commision
+pick a9e799a Exercise 2 Amending
+
+Successfully rebased and updated refs/heads/main.
+
+```
+
+```bash
+$ git push origin main --force
+
+```
