@@ -230,3 +230,21 @@ Successfully rebased and updated refs/heads/main.
 $ git push origin main --force
 
 ```
+
+#### Exercise 4
+
+$ git reflog
+
+```bash
+...
+1cfb6db HEAD@{25}: reset: moving to HEAD
+1cfb6db HEAD@{26}: commit: Exercise 2 Amending
+a9e799a HEAD@{27}: commit (amend): chore: Create the forth file
+34d8419 HEAD@{28}: commit: First commision
+e3f5bd2 HEAD@{29}: commit: First commision
+cadd810 HEAD@{30}: commit: chore: Creating third and forth file
+13994b7 HEAD@{31}: commit: chore: Creating another file
+b9e91fb HEAD@{32}: commit: chore: Creating initial file
+ab7789b HEAD@{33}: Branch: renamed refs/heads/master to refs/heads/main
+ab7789b HEAD@{35}: commit (initial): First commission
+```
