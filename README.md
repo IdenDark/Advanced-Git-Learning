@@ -233,9 +233,8 @@ $ git push origin main --force
 
 #### Exercise 4
 
-$ git reflog
-
 ```bash
+$ git reflog
 ...
 1cfb6db HEAD@{25}: reset: moving to HEAD
 1cfb6db HEAD@{26}: commit: Exercise 2 Amending
@@ -247,4 +246,27 @@ cadd810 HEAD@{30}: commit: chore: Creating third and forth file
 b9e91fb HEAD@{32}: commit: chore: Creating initial file
 ab7789b HEAD@{33}: Branch: renamed refs/heads/master to refs/heads/main
 ab7789b HEAD@{35}: commit (initial): First commission
+```
+
+```bash
+$ git rebase -i b9e91fb^
+
+squash de46a0f chore: Creating Initial and Second file
+pick de1d614 chore: Creating third and forth file
+pick f83aec0 First commision
+pick 78e35f0 chore: Create the forth file
+pick 50cd0f3 Exercise 2 Amending
+pick c066928 Challenge 1 Part 2: Edit Command History
+pick 4d0ce34 Keeping History Tidy - Squashing Commits
+```
+
+```bash
+
+chore: Create initial and another file
+```
+
+```bash
+
+git push origin main --force
+
 ```
